@@ -23,6 +23,9 @@ public:
     // Returns number of players lives
     int& GetLives();
 
+    // Adds a ship to the vector
+    void AddShip(int col, int row);
+
     // Player gets "board attacked"
     // Returns: -1 = out of bounds, 0 = miss, 1 = hit
     int Attacked(int col, int row);

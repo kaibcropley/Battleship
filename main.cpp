@@ -23,9 +23,28 @@ void testPlayer() {
     p.GetLives()--;
     assert(p.GetLives() == 4);
     assert(p.GetLives() != 5);
+
+    for (int i{0}; i < p.GetLives(); i++) {
+        p.AddShip(i, i);
+    }
+
+    assert(p.Attacked(0, 0) == 1);
+    assert(p.Attacked(1, 1) == 1);
+
+    assert(p.Attacked(-1, 0) == -1);
+    assert(p.Attacked(0, -1) == -1);
+    assert(p.Attacked(10, 0) == -1);
+    assert(p.Attacked(0, 10) == -1);
+
+    assert(p.Attacked(0, 2) == 0);
+    assert(p.Attacked(2, 0) == 0);
+    assert(p.Attacked(0, 0) == 0);
+    assert(p.Attacked(1, 1) == 0);
 }
 
 void testAll() {
+    // If a test is commented out it prints to the console, uncomment for full
+    // testing
 //    testBoard();
     testPlayer();
 }

@@ -4,19 +4,12 @@
 
 #include "player.h"
 
+#include <utility>
+
 // Constructor
 Player::Player(std::string name, int lives, int width, int height) :
-        name{name}, lives{lives} {
+        name{std::move(name)}, lives{lives} {
     grid = new Board(width, height);
-    std::vector<Ship> toCopy(lives);
-    ships = toCopy;
-
-    /////////////////////////////////////////////
-    //////////// temp for testing ///////////////
-    /////////////////////////////////////////////
-    for (int i{0}; i < lives; i++) {
-        ships[i] = Ship(i, i);
-    }
 }
 
 // Destructor
@@ -34,6 +27,11 @@ int &Player::GetLives() {
     return lives;
 }
 
+// Adds a ship to the vector
+void Player::AddShip(int col, int row) {
+    ships.emplace_back(Ship(col, row));
+}
+
 // Player gets "board attacked"
 // Returns: -1 = out of bounds, 0 = miss, 1 = hit
 int Player::Attacked(int col, int row) {
@@ -45,6 +43,9 @@ int Player::Attacked(int col, int row) {
     for (int i{0}; i < ships.size(); i++) {
         if (col == ships[i].col && row == ships[i].row) {
             grid->Hit(col, row);
+            ships[i] = ships[ships.size() - 1];
+            ships.pop_back();
+            lives--;
             return 1;
         }
     }
@@ -52,3 +53,5 @@ int Player::Attacked(int col, int row) {
     grid->Miss(col, row);
     return 0;
 }
+
+
