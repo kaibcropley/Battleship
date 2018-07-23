@@ -4,7 +4,8 @@ A game of Battleship I have been working on while I have been on vacation
 Version .1
 
 Finished:
-Board class
+
+-Board class
 
 Planned:
 
