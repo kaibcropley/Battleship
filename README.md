@@ -7,9 +7,11 @@ Finished:
 
 -Board class
 
+-Player class
+
 Planned:
 
--Player trying to randomly placed boats
+-Player trying to hit randomly placed boats
 
 -Player vs Player
 
