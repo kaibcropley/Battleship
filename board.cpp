@@ -21,7 +21,7 @@ Board::~Board() {
 
 // Prints board to console
 void Board::Print() {
-   std::cout << "  ";
+    std::cout << "  ";
     for (int i{0}; i < width; i++) {
         std::cout << i << " ";
     }

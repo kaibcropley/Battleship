@@ -3,4 +3,4 @@ project(Battleship)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Battleship main.cpp board.cpp board.h player.cpp player.h)
+add_executable(Battleship main.cpp board.cpp board.h player.cpp player.h menu.cpp menu.h)

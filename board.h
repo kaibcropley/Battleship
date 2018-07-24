@@ -26,10 +26,10 @@ public:
     void Miss(int width, int height);
 
     // Returns width of board
-    int& getWidth();
+    int &getWidth();
 
     // Returns height of board
-    int& getHeight();
+    int &getHeight();
 
 private:
     // Coordinates system info

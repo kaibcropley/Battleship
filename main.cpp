@@ -2,6 +2,7 @@
 #include <cassert>
 #include "board.h"
 #include "player.h"
+#include "menu.h"
 
 void testBoard() {
     Board board(5, 5);
@@ -38,15 +39,22 @@ void testPlayer() {
 
     assert(p.Attacked(0, 2) == 0);
     assert(p.Attacked(2, 0) == 0);
-    assert(p.Attacked(0, 0) == 0);
-    assert(p.Attacked(1, 1) == 0);
+
+    p.printBoard();
+}
+
+void testMenu() {
+    Menu m;
+    m.setGameUp();
 }
 
 void testAll() {
     // If a test is commented out it prints to the console, uncomment for full
     // testing
 //    testBoard();
-    testPlayer();
+//    testPlayer();
+    testMenu();
+
 }
 
 int main() {

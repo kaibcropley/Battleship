@@ -21,7 +21,7 @@ public:
     std::string GetName();
 
     // Returns number of players lives
-    int& GetLives();
+    int &GetLives();
 
     // Adds a ship to the vector
     void AddShip(int col, int row);
@@ -29,6 +29,9 @@ public:
     // Player gets "board attacked"
     // Returns: -1 = out of bounds, 0 = miss, 1 = hit
     int Attacked(int col, int row);
+
+    // Prints board for current player
+    void printBoard();
 
 private:
     // Players name
@@ -38,7 +41,7 @@ private:
     int lives;
 
     // Players personal board
-    Board* grid;
+    Board *grid;
 
     // Ship object to hold it's board position
     struct Ship {

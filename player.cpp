@@ -14,7 +14,7 @@ Player::Player(std::string name, int lives, int width, int height) :
 
 // Destructor
 Player::~Player() {
-
+    delete grid;
 }
 
 // Returns name of the player
@@ -52,6 +52,11 @@ int Player::Attacked(int col, int row) {
 
     grid->Miss(col, row);
     return 0;
+}
+
+// Prints board for current player
+void Player::printBoard() {
+    grid->Print();
 }
 
 
