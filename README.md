@@ -1,18 +1,18 @@
 # Battleship
 A game of Battleship I have been working on while I have been on vacation
 
-Version .1
+Version 1.0
 
 Finished:
 
--Board class
+-Player attacking computer
 
--Player class
+--Board class
+
+--Player class
+
+--Menu class
 
 Planned:
 
--Player trying to hit randomly placed boats
-
--Player vs Player
-
--Player vs computer
+-Player vs computer full game
