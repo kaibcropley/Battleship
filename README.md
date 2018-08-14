@@ -14,7 +14,3 @@ Finished:
 --Player class
 
 --Menu class
-
-Planned:
-
--Player vs computer full game
