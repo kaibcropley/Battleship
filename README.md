@@ -1,5 +1,5 @@
 # Battleship
-A game of Battleship I have been working on while I have been on vacation
+A game of Battleship based off my previous battleship developed in Python
 
 Made with and working in Clion
 
